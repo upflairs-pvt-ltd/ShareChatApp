@@ -7,7 +7,7 @@ my_port=1005
 my_address=(my_ip,my_port)
 s.bind(my_address)
 
-while 3 > 2 :
+while True :
     data=s.recvfrom(100) 
     new_data=data[0]
     final_msg=new_data.decode('ascii')
