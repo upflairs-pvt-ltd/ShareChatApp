@@ -48,6 +48,7 @@ while True :
         try:
 
             textfile_artifact_path_with_ip = os.path.join(artifact_dir_path,ip_address,'text_files')
+            print(textfile_artifact_path_with_ip)
             text_data = message
             textfile_class_obj.Data_resampling_write(Recieve_data = text_data , writing_path= textfile_artifact_path_with_ip)
             logging.info(f"successfully recieved the Text-file !")

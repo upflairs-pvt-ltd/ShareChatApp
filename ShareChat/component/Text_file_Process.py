@@ -35,8 +35,9 @@ class TextFileProcess:
             file_name = Recieve_data[1:Recieve_data.find('|')]
             Data = Recieve_data[Recieve_data.find('|')+1:]
             file_name = file_name+'.txt'
-            file_dir_path = os.path.join(writing_path,file_name)
-
+            os.makedirs(writing_path,exist_ok=True)
+            file_dir_path = writing_path + "\\"+file_name
+            print(file_dir_path)
             logging.info(f'writing text file data into text file {writing_path}')
             with open(file_dir_path ,'w',encoding='utf-8') as text_file:
                 text_file.write(Data)
