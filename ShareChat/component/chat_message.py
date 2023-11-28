@@ -3,7 +3,6 @@ from ShareChat.logger import logging
 import os , sys
 
 class ChatMessage:
-
     def filter_message_address(self,RecieveDat):
         """Function returns message , ip address , port no"""
         try:

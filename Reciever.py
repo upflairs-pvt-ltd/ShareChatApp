@@ -18,10 +18,8 @@ textfile_class_obj = TextFileProcess()
 s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM) 
 # s=socket.socket(socket.AF_INET,socket.SOCK_STREAM) 
 
-
-
 my_ip="0.0.0.0"
-my_port=1005
+my_port=1122
 my_address=(my_ip,my_port)
 s.bind(my_address)
 image_temp = 0
@@ -82,7 +80,16 @@ while True :
 
             if image_temp == 1 :
                 try:
+
+                    #<<<<<<<<<<<< ERROR FIX PROGR EXEC. YHA FAS GYI HE IMAGE_TEMP KI VAJAH SE  >>>>>>>>>>>>>>
+
+                    print('waiting !!!')
                     recieved_data = s.recvfrom(65000)
+                    print('got it ')
+                    print('execution stuck here')
+
+
+
                     image_file_path = os.path.join(image_dir_file_path,str(file_name_with_extension)[2:-1])          # <<<<<<<< FILE NAME DECODING ERROR
                     with open(image_file_path,'ab') as file:
                         file.write(recieved_data[0])
