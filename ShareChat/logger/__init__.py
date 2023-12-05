@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 #preparing path for log files
-log_file_base_path = os.getenv("LOG_DIR_PATH")
+log_file_base_path = os.getenv("LOG_DIR_PATH")     #,,,,,,,,,,,,,,,,,,,
 log_directory = "shareChat_Logs"
 log_directory_path = os.path.join(log_file_base_path,log_directory)
 current_time_stamp = f"{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}"

@@ -13,8 +13,7 @@ s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)    #UPD protocol
 # s=socket.socket(socket.AF_INET,socket.SOCK_STREAM) 
 
 
-target_ip="127.0.0.1"
-# target_ip="192.168.1.7"
+target_ip="192.168.1.25"
 target_port=1122
 
 final_target=(target_ip,target_port)
